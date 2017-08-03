@@ -1,24 +1,34 @@
-# README
+# Jerb Board
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+As a newly-minted software consultant for The Gnar Company Inc, you've been tasked with creating a MVP for a simple job posting application. This repo contains a skeleton codebase for creating the product along with material supplied by the client. The task is to perform some basic information-gathering and put together a simple 2-3 page form-based Rails app. There are no solid requirements for how it should be architected, but the skeleton already has a database configured. The client has booked 2-4 hours worth of your time.
 
-Things you may want to cover:
+## Instructions
+The co-founder of JerbyJerbs wants to build out a MVP web app to validate an idea. JerbyJerbs is a small company that advertises household job services and assigns the jobs to college students. It is currently a manual process:
 
-* Ruby version
+1. Job posters call a phone number.
+2. The receptionist takes down the information.
+3. The receptionist posts it to a white board.
+4. JerbyJerbs staff manually matches up posted jobs to job doers.
 
-* System dependencies
+This is a multi-phased engagement. The goal of the first phase is to automate the job posting process and allow the receptionist(s) to take down the information and record it in the web-app. The web app should also contain a simple job listing page, ordered by date for job doers to view. The client supplied some basic wireframes which outline the basic flow and data elements. The wireframes from the client are in the /docs directory.
 
-* Configuration
+## Requirements
+Create a rails app based on the specifications listed above. You don't need to go overboard BUT a core level of modern development best practices need to be present. The app also needs to look presentable and have a basic level of responsive behavior. The skeleton codebase contains Bootstrap, but any UI framework may be used. Please feel free to ask questions about the project with other Gnar Team Members.
 
-* Database creation
+## Getting Started
+The skeleton app contains enough gems to get going, but feel free to add more.
 
-* Database initialization
+## Chrome Headless
 
-* How to run the test suite
+Capybara is configured to run with Chrome Headless as the driver. In order to run Chrome Headless, you must have Chrome installed and also ChromeDriver.
 
-* Services (job queues, cache servers, search engines, etc.)
+On OS X, you may install ChromeDriver via homebrew `brew install chromedriver`.
 
-* Deployment instructions
+## Switching out Capybara Driver
 
-* ...
+If you'd like to not run your tests headless, for example, to troubleshoot an issue and see what's on the screen, modify the `Capybara.javascript_driver` in `spec/rails_helper.rb` to use `:chome` instead of `:headless_chrome`. After the change, this line should look as follows:
+
+```ruby
+Capybara.javascript_driver = :chrome
+```
