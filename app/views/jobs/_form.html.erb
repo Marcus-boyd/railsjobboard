@@ -1,0 +1,25 @@
+<%= form_for(job) do |f| %>
+  <div>
+    <%= f.label :poster %>
+    <%= f.text_field :poster %>
+  </dviv>
+  <div>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </dviv>
+  <div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </dviv>
+  <div>
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </dviv>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </dviv>
+  <div>
+    <%= f.submit 'Add Job' %>
+  </div>
+<% end %>
