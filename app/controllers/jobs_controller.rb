@@ -5,6 +5,9 @@ class JobsController < ApplicationController
     @jobs = Job.order("created_at DESC")
   end
 
+  def show
+  end
+
   def new
     @job = Job.new
   end
